@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Text, Link, Image, VStack, IconButton } from "@chakra-ui/react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { Box, Flex, Heading, Text, Link, Image, VStack, IconButton, useColorMode } from "@chakra-ui/react";
+import { FaLinkedin, FaGithub, FaEnvelope, FaMoon } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -25,6 +25,7 @@ const Index = () => {
           <Link href="mailto:johndoe@example.com">
             <IconButton aria-label="Email" icon={<FaEnvelope />} size="lg" colorScheme="red" />
           </Link>
+          <IconButton aria-label="Toggle color mode" icon={<FaMoon />} onClick={useColorMode().toggleColorMode} size="lg" mt={5} />
         </Flex>
       </Box>
     </Flex>
